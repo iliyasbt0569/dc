@@ -10,7 +10,7 @@ style.innerHTML = `
 document.head.appendChild(style);
 
 const highlightDisplay = document.createElement('div');
-highlightDisplay.style.position = 'absolute';
+highlightDisplay.style.position = 'fixed';
 highlightDisplay.style.bottom = '0';
 highlightDisplay.style.left = '0';
 highlightDisplay.style.width = '100%';
@@ -20,7 +20,10 @@ highlightDisplay.style.fontSize = '16px';
 highlightDisplay.style.padding = '5px 10px';
 highlightDisplay.style.zIndex = '9999';
 highlightDisplay.style.pointerEvents = 'none';
+highlightDisplay.style.boxShadow = '0 -2px 5px rgba(0,0,0,0.1)';
+highlightDisplay.style.fontFamily = 'Arial, sans-serif';
 document.body.appendChild(highlightDisplay);
+
 
 const testData = `
 <question> «Клиент сұранысын өңдеу» функционалды блогы үшін «CRM-жүйе» нысаны
@@ -641,7 +644,7 @@ for (let i = 0; i < lines.length; i++) {
 function findQuestionAndAnswer(selectedText) {
   for (let pair of qaPairs) {
     if (pair.question.includes(selectedText) || pair.answer.includes(selectedText)) {
-      return `Вопрос: ${pair.question} | Правильный вариант: ${pair.answer}`;
+      return `q: ${pair.question}\nvr: ${pair.answer}`;
     }
   }
   return '';
