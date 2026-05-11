@@ -16,12 +16,12 @@ highlightDisplay.style.left = '0';
 highlightDisplay.style.width = '100%';
 highlightDisplay.style.background = 'rgba(255,255,255,0.95)';
 highlightDisplay.style.color = '#8a8a8a';
-highlightDisplay.style.fontSize = '16px';
-highlightDisplay.style.padding = '5px 10px';
+highlightDisplay.style.fontSize = '12px';
+highlightDisplay.style.padding = '0px 10px';
 highlightDisplay.style.zIndex = '9999';
 highlightDisplay.style.pointerEvents = 'none';
-highlightDisplay.style.boxShadow = '0 -2px 5px rgba(0,0,0,0.1)';
-highlightDisplay.style.fontFamily = 'Arial, sans-serif';
+//highlightDisplay.style.boxShadow = '0 -2px 5px rgba(0,0,0,0.1)';
+//highlightDisplay.style.fontFamily = 'Arial, sans-serif';
 document.body.appendChild(highlightDisplay);
 
 
